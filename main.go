@@ -69,12 +69,6 @@ func DefaultSetup(presetup func(*stomper.Server) error) *stomper.Server {
 	return stompServer
 }
 
-func main() {
-	DefaultSetup(func(server *stomper.Server) error {
-		return nil
-	})
-}
-
 func logInit() *zap.SugaredLogger {
 	pe := zap.NewProductionEncoderConfig()
 
