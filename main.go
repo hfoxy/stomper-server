@@ -1,4 +1,4 @@
-package main
+package stomperserver
 
 import (
 	"context"
@@ -13,7 +13,7 @@ import (
 	"strconv"
 )
 
-var version = "v0.0.1"
+var version = "v0.1.3"
 var sugar *zap.SugaredLogger
 
 var memoryLimit = flag.Int("memory-limit", getEnvInt("MEMORY_LIMIT", 32212254720), "memory limit (defaults to 30MiB)")
