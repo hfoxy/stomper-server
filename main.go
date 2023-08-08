@@ -33,7 +33,7 @@ func DefaultSetup(presetup func(*stomper.Server) error) *stomper.Server {
 	log.SetFlags(0)
 
 	sugar = logInit()
-	if dataSource == nil || *dataSource != "redis" {
+	if dataSource == nil || (*dataSource != "redis" && *dataSource != "none") {
 		sugar.Errorf("unknown data source: %s", *dataSource)
 		os.Exit(1)
 		return nil
